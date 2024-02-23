@@ -4,6 +4,10 @@ NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID
 <br />
 <br />
 
+Diagrama:
+![diagram](./docs/diagram.png)
+
+
 Cronograma de aulas:
 - [ ✅ ] 001 - Introdução
 - [ ❌ ] 002 - SignUp API - Presentation Layer
