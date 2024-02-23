@@ -1,12 +1,19 @@
-import { type AccountModel, type AddAccountModel } from '../../../../domain/models'
-import { type AddAccount } from '../../../../domain/use-cases/add-account.use-case'
-import { InvalidParamError, MissingParamError, ServerError } from '../../../errors'
-import { type EmailValidator } from '../../../protocols/'
 import { SignUpController } from '../../sign-up.controller'
+import {
+  MissingParamError,
+  InvalidParamError,
+  ServerError
+} from '../../../../errors'
+import {
+  type AccountModel,
+  type AddAccount,
+  type AddAccountModel,
+  type EmailValidator
+} from '../../sign-up.protocol'
 
 const makeEmailValidadtor = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
-    isValid (email: string): boolean {
+    isValid(email: string): boolean {
       return true
     }
   }
@@ -16,7 +23,7 @@ const makeEmailValidadtor = (): EmailValidator => {
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
-    add (account: AddAccountModel): AccountModel {
+    add(account: AddAccountModel): AccountModel {
       const fakeAccount = {
         id: '123',
         name: 'John Doe',
@@ -111,7 +118,9 @@ describe('SignUp controller', () => {
     const httpResponse = sut.handle(httpRequest)
 
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
+    expect(httpResponse.body).toEqual(
+      new MissingParamError('passwordConfirmation')
+    )
   })
 
   it('should return 400 if password confirmation fails', async () => {
@@ -128,7 +137,9 @@ describe('SignUp controller', () => {
     const httpResponse = sut.handle(httpRequest)
 
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new InvalidParamError('passwordConfirmation'))
+    expect(httpResponse.body).toEqual(
+      new InvalidParamError('passwordConfirmation')
+    )
   })
 
   it('should return 400 if an invalid email is provided', async () => {
