@@ -10,7 +10,7 @@ Diagrama:
 
 Cronograma de aulas:
 - [ ✅ ] 001 - Introdução
-- [ ❌ ] 002 - SignUp API - Presentation Layer
+- [ ✅ ] 002 - SignUp API - Presentation Layer
 - [ ❌ ] 003 - Jest
 - [ ❌ ] 004 - Utils Layer
 - [ ❌ ] 005 - SignUp API - Data Layer
