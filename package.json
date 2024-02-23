@@ -4,7 +4,12 @@
   "main": "index.js",
   "author": "Aguiiiar <devaguiar14@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.20",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
@@ -13,10 +18,11 @@
     "eslint-plugin-promise": "^6.0.0",
     "git-commit-msg-linter": "^5.0.6",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2"
-  },
-  "dependencies": {
-    "@types/node": "^20.11.19",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.2",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
-  }
+  },
+  "dependencies": {}
 }
