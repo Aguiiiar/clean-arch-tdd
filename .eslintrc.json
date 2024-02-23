@@ -1,9 +1,15 @@
 {
-  "extends": "standard-with-typescript",
+  "extends": [
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": "off"
-  }
+    // "max-len": ["warn", { "code": 80, "ignoreComments": true }]
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin", "prettier"]
 }
