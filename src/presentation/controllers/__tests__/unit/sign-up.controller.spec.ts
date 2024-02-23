@@ -1,0 +1,18 @@
+import { SignUpController } from '../../sign-up.controller'
+
+describe('SignUp controller', () => {
+  it('should return 400 if no name is provided', async () => {
+    const sut = new SignUpController()
+
+    const httpRequest = {
+      body: {
+        email: 'john@email.com',
+        password: '123123213',
+        passwordConfirmation: '123123213'
+      }
+    }
+    const httpResponse = await sut.handle(httpRequest)
+
+    expect(httpResponse.statusCode).toBe(400)
+  })
+})
