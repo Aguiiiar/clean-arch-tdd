@@ -8,8 +8,8 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/strict-boolean-expressions": "off"
-    // "max-len": ["warn", { "code": 80, "ignoreComments": true }]
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "plugins": ["@typescript-eslint/eslint-plugin", "prettier"]
 }
