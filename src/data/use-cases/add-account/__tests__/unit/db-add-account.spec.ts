@@ -1,5 +1,5 @@
-import { type Encrypter } from '../../../../protocols/encrypter.protocol'
 import { DbAddAccount } from '../../db-add-account'
+import { type Encrypter } from '../../db-add-account.protocol'
 
 class EncrypterStub implements Encrypter {
   async encrypt(value: string): Promise<string> {
