@@ -5,8 +5,9 @@
   "author": "Aguiiiar <devaguiar14@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --runInBand",
-    "test:staged": "jest"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:staged": "jest",
+    "test:ci": "npm test -- --coverage"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

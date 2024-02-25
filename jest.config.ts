@@ -11,7 +11,7 @@ export default {
     '^.+\\.(t|j)s$': 'ts-jest'
   },
   collectCoverageFrom: ['**/*.(t|j)s'],
-  coverageDirectory: '../coverage',
+  coverageDirectory: 'coverage',
   collectCoverage: false,
   testEnvironment: 'node'
 }
