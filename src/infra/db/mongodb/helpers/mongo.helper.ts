@@ -1,12 +1,16 @@
-import { MongoClient } from 'mongodb'
-
+import { MongoClient, type Collection } from 'mongodb'
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const client: MongoClient = new MongoClient(process.env.MONGO_URL!)
 export const MongoHelper = {
-  client: MongoClient,
-  async connect(uri: string): Promise<void> {
-    await MongoClient.connect('')
+  async connect(): Promise<void> {
+    await client.connect()
   },
 
   async disconnect(): Promise<void> {
-    this.client.close()
+    await client.close()
+  },
+
+  getCollection(name: string): Collection {
+    return client.db().collection(name)
   }
 }

@@ -2,6 +2,7 @@
 // import { compilerOptions } from './tsconfig.json'
 
 export default {
+  preset: '@shelf/jest-mongodb',
   moduleFileExtensions: ['js', 'json', 'ts'],
   // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
   //   prefix: '<rootDir>/'
@@ -12,7 +13,6 @@ export default {
   },
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: 'coverage',
-  collectCoverage: false,
-  testEnvironment: 'node',
-  preset: '@shelf/jest-mongodb'
+  collectCoverage: false
+  // testEnvironment: 'node',
 }
