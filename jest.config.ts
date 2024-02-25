@@ -13,5 +13,6 @@ export default {
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: 'coverage',
   collectCoverage: false,
-  testEnvironment: 'node'
+  testEnvironment: 'node',
+  preset: '@shelf/jest-mongodb'
 }
