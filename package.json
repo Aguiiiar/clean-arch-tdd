@@ -7,6 +7,8 @@
   "scripts": {
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:staged": "jest",
+    "test:unit": "npm test -- -c jest.config.unit.ts",
+    "test:integration": "npm test -- -c jest.config.integration.ts",
     "test:ci": "npm test -- --coverage",
     "start": "sucrase-node src/main/server.ts"
   },
