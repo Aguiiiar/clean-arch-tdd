@@ -1,5 +1,5 @@
 import request from 'supertest'
-import app from '../config/app'
+import app from '../../../config/app'
 
 describe('Bory Parser Middleware', () => {
   it('should oarse body as json', async () => {
