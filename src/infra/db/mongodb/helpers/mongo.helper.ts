@@ -1,6 +1,7 @@
 import { MongoClient, type Collection } from 'mongodb'
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const client: MongoClient = new MongoClient(process.env.MONGO_URL!)
+
+const client: MongoClient = new MongoClient('mongodb://127.0.0.1:27017')
+
 export const MongoHelper = {
   async connect(): Promise<void> {
     await client.connect()
