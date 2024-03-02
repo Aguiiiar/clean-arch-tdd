@@ -15,7 +15,7 @@ Cronograma de aulas:
 - [ ✅ ] 004 - Utils Layer
 - [ ✅ ] 005 - SignUp API - Data Layer
 - [ ✅ ] 006 - SignUp API - Infra Layer
-- [ ❌ ] 007 - SignUp API - Main Layer
+- [ ✅ ] 007 - SignUp API - Main Layer
 - [ ❌ ] 008 - Log de Erro
 - [ ❌ ] 009 - Login API - Presentation Layer
 - [ ❌ ] 010 - Login API - Data Layer
