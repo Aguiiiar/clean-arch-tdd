@@ -24,6 +24,6 @@ describe('Bory Parser Middleware', () => {
         password: 'john_doe213213',
         passwordConfirmation: 'john_doe213213'
       })
-      .expect(200)
+      .expect(201)
   })
 })
